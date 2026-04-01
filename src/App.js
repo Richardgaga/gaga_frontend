@@ -7,9 +7,9 @@ function App() {
   const [gbpusd, setGbpusd] = useState(null);
 
   useEffect(() => {
-    axios.get("https://gaga-server.onrender.com/signal/EURUSD=X")
+    axios.get("https://gaga-backend-2.onrender.com/signal/EURUSD=X")
       .then(res => setEurusd(res.data.signal));
-    axios.get("https://gaga-server.onrender.com/signal/GBPUSD=X")
+    axios.get("https://gaga-backend-2.onrender.com/signal/GBPUSD=X")
       .then(res => setGbpusd(res.data.signal));
   }, []);
 
