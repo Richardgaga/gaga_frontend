@@ -1,4 +1,3 @@
-# React frontend
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Chart from "./Chart";
@@ -15,8 +14,9 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1>Gaga Forex Signals</h1>
+
       <h2>EUR/USD</h2>
       {eurusd && (
         <div>
@@ -24,6 +24,7 @@ function App() {
           <p>Stop Loss: {eurusd.stop_loss}</p>
         </div>
       )}
+
       <h2>GBP/USD</h2>
       {gbpusd && (
         <div>
@@ -31,6 +32,7 @@ function App() {
           <p>Stop Loss: {gbpusd.stop_loss}</p>
         </div>
       )}
+
       <Chart />
     </div>
   );
